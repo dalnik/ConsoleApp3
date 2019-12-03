@@ -10,31 +10,40 @@ namespace ConsoleApp3
     {
         static void Main(string[] args)
         {
-            // Запросить имя пользователя
-            Console.Write("Введите имя и нажмите Enter:");
-      
-      // Прочесть данные; присвоить значение переменной \"name\"
+            // Запрос имени
+            Console.Write("Введите свое имя ");
+            
+            // Прочесть данные; присвоить значение переменной \"name\"
             string name = Console.ReadLine();
 
             // \"name\" можно использовать как обычную переменную
             Console.WriteLine("Hello, " + name + "!");
-      
-      // Сделаем это снова, только теперь запросим тип пиццы
-            Console.Write("Введите название пиццы и нажмите Enter: ");
+
+            // выбор пиццы
+            Console.Write("Выберите пиццу.Пицца Одесская, нажмите a, Пицца Южная, нажмите b, Пицца Восточная, нажмите c ");
+            Console.ReadLine();
+
+            // Сделаем это снова, только теперь запросим тип пиццы
+            Console.Write("Укажите на каком корже: толстом или тонком и нажмите Enter: ");
       
             string pizza = Console.ReadLine();
 
-            // А теперь используем обе переменные
-            Console.WriteLine("Привет, {0}! Одна {1} пицца на подходе!", name, pizza);
-      
-      // Используем ReadLine() с численными типами
-            Console.Write("Введите свой возраст и нажмите Enter: ");
+           
+            // Используем ReadLine() с численными типами
+            Console.Write("Введите количество пиццы и нажмите Enter: ");
       
             int age = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Введите свой рост и нажмите Enter (можно использовать дроби): ");
-      
+            Console.Write("Закажите сок, в стаканах (можно использовать дроби) и нажмите Enter: ");
+
             double height = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Значицца, вам {0} лет, а рост {1}.", age, height);
+            Console.WriteLine("Вы заказали {0} пиццы, и сок {1}. Нажмите Enter: ", age, height);
+
+            Console.ReadLine();
+
+            // А теперь используем обе переменные
+            Console.WriteLine("Привет, {0}! {1} пицца на подходе!", name, pizza);
+
+           
 
             // А теперь попросим пользователя нажать \"Enter\" для выхода из программы
             Console.Write("Программа завершена. Нажмите Enter");
